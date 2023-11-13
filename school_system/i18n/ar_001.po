@@ -1,0 +1,428 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_system
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-13 12:54+0000\n"
+"PO-Revision-Date: 2023-11-13 14:59+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__age
+msgid "Age"
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: school_system
+#: model:ir.model.fields.selection,name:school_system.selection__student_student__state__approved
+msgid "Approved"
+msgstr "تم الموافقه"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.rejection_view_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__city
+msgid "City"
+msgstr "مدينة"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__name
+#: model:ir.model.fields,field_description:school_system.field_student_student__level
+msgid "Class"
+msgstr "فصل"
+
+#. module: school_system
+#: model:ir.ui.menu,name:school_system.leve_settings
+msgid "Classes"
+msgstr "فصول"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__create_uid
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__create_uid
+#: model:ir.model.fields,field_description:school_system.field_student_student__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__create_date
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__create_date
+#: model:ir.model.fields,field_description:school_system.field_student_student__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__dob
+msgid "Date of birth"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__display_name
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__display_name
+#: model:ir.model.fields,field_description:school_system.field_student_student__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields.selection,name:school_system.selection__student_student__gender__female
+msgid "Female"
+msgstr "انثى"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__f_name
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__gender
+msgid "Gender"
+msgstr "النوع"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__id
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__id
+#: model:ir.model.fields,field_description:school_system.field_student_student__id
+msgid "ID"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__message_needaction
+#: model:ir.model.fields,help:school_system.field_student_student__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level____last_update
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject____last_update
+#: model:ir.model.fields,field_description:school_system.field_student_student____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__l_name
+msgid "Last Name"
+msgstr "اللقب"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__write_uid
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__write_uid
+#: model:ir.model.fields,field_description:school_system.field_student_student__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_level__write_date
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__write_date
+#: model:ir.model.fields,field_description:school_system.field_student_student__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields.selection,name:school_system.selection__student_student__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__m_name
+msgid "Middel Name"
+msgstr "الاسم الأوسط"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__nationality
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_reason_reject__reason
+msgid "Reason of Rejection"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model,name:school_system.model_student_reason_reject
+msgid "Reason of rejection"
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: school_system
+#: model:ir.actions.act_window,name:school_system.reject_action
+#: model:ir.model.fields,field_description:school_system.field_student_student__reject_reason
+#: model_terms:ir.ui.view,arch_db:school_system.rejection_view_form
+msgid "Reject Reason"
+msgstr "سبب الرفض"
+
+#. module: school_system
+#: model:ir.model.fields.selection,name:school_system.selection__student_student__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_form
+msgid "Reset"
+msgstr "اعادة"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: school_system
+#: model:ir.ui.menu,name:school_system.school_menu
+msgid "School Management System"
+msgstr "نظم إدارة المدارس"
+
+#. module: school_system
+#: model:ir.ui.menu,name:school_system.school_settings
+msgid "Settings"
+msgstr "اعدادات"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__state
+msgid "Status"
+msgstr "الحاله"
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_form
+msgid "Student"
+msgstr "طالب"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__name
+msgid "Student Full Name"
+msgstr "اسم الطالب بالكامل"
+
+#. module: school_system
+#: model:ir.model,name:school_system.model_student_level
+msgid "Student Levels"
+msgstr "مستوى الطالب"
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_tree
+msgid "Student List"
+msgstr "قائمه الطلاب"
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__image
+msgid "Student image"
+msgstr "صوره الطالب"
+
+#. module: school_system
+#: model:ir.actions.act_window,name:school_system.student_view_action
+#: model:ir.model.fields,field_description:school_system.field_student_level__students
+#: model:ir.ui.menu,name:school_system.students_categ
+#: model:ir.ui.menu,name:school_system.students_list
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: school_system
+#: model:ir.model,name:school_system.model_student_student
+msgid "Students Data"
+msgstr "بيانات الطلاب"
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.rejection_view_form
+msgid "Submit"
+msgstr "تاكيد"
+
+#. module: school_system
+#: model:ir.model.fields,help:school_system.field_student_student__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields,field_description:school_system.field_student_student__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: school_system
+#: model:ir.model.fields.selection,name:school_system.selection__student_student__state__wait
+msgid "Waiting"
+msgstr "انتظار"
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.student_view_form
+msgid "e.g. Mohamed Ahmed S"
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.level_view_form
+msgid "level_form"
+msgstr ""
+
+#. module: school_system
+#: model_terms:ir.ui.view,arch_db:school_system.level_view_tree
+msgid "level_view_tree_tree"
+msgstr ""
+
+#. module: school_system
+#: model:ir.actions.act_window,name:school_system.level_action
+msgid "levels"
+msgstr "المراحل"

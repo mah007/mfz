@@ -10,20 +10,20 @@ class Students(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Students Data'
 
-    name = fields.Char('Student Full Name', compute='_getfullname')
-    image = fields.Image('Student image')
-    f_name = fields.Char('First Name', required=True)
-    m_name = fields.Char('Middel Name')
-    l_name = fields.Char('Last Name', required=True)
-    gender = fields.Selection([('male', 'Male'), ('female', 'Female')])
+    name = fields.Char('Student Full Name', compute='_getfullname', translate=True)
+    image = fields.Image('Student image', )
+    f_name = fields.Char('First Name', required=True, translate=True)
+    m_name = fields.Char('Middel Name', translate=True)
+    l_name = fields.Char('Last Name', required=True, translate=True)
+    gender = fields.Selection([('male', 'Male'), ('female', 'Female')], translate=True)
     dob = fields.Date('Date of birth')
     age = fields.Integer('Age', compute='_get_age')
     level = fields.Many2one('student.level', string='Class')
     nationality = fields.Many2one('res.country')
     city = fields.Many2one('res.country.state', )
     state = fields.Selection([('wait', 'Waiting'), ('approved', 'Approved'), ('rejected', 'Rejected')], default='wait',
-                             string='Status')
-    reject_reason = fields.Text('Reject Reason')
+                             string='Status', translate=True)
+    reject_reason = fields.Text('Reject Reason', translate=True)
 
     def act_approve(self):
         for rec in self:
