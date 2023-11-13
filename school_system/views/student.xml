@@ -1,0 +1,76 @@
+<odoo>
+  <data>
+   <record id="student_view_form" model="ir.ui.view">
+       <field name="name">student_view_form</field>
+       <field name="model">student.student</field>
+       <field name="arch" type="xml">
+           <form string="Student">
+               <header>
+                   <button name="to_waiting" type="object" string="Reset" class="btn-info" attrs="{'invisible': [('state', '=', 'wait')]}"/>
+                   <button name="act_approve" type="object" string="Approve" class="btn-success" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
+                   <button name="%(school_system.reject_action)d" type="action" string="Reject" class="btn-danger" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
+                   <field name="state" widget="statusbar" statusbar_visible="wait,approved,rejected"/>
+               </header>
+               <sheet>
+                    <field name="image" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Mohamed Ahmed S"/>
+                        </h1>
+                    </div>
+                   <group>
+                       <group>
+                            <field name="f_name"/>
+                            <field name="m_name"/>
+                            <field name="l_name"/>
+                           <field name="nationality" />
+                           <field name="city" />
+
+                       </group>
+                       <group>
+                            <field name="gender" widget="radio" options="{'horizontal': true}"/>
+                            <field name="dob"/>
+                            <field name="age"/>
+                            <field name="level"/>
+
+
+                       </group>
+                       <group>
+                           <field name="reject_reason" attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                       </group>
+
+                       
+                   </group>
+               </sheet>
+             <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+           </form>
+       </field>
+   </record>
+
+      <record id="student_view_tree" model="ir.ui.view">
+          <field name="name">student_view_tree</field>
+          <field name="model">student.student</field>
+          <field name="arch" type="xml">
+              <tree string="Student List">
+                  <field name="name"/>
+                  <field name="gender"/>
+                  <field name="dob"/>
+                  <field name="age"/>
+                  <field name="state" decoration-info="state == 'wait'" decoration-success="state == 'approved'" decoration-danger="state == 'rejected'" widget="badge"/>
+
+              </tree>
+          </field>
+      </record>
+
+      <record id="student_view_action" model="ir.actions.act_window">
+          <field name="name">Students</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">student.student</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+  </data>
+</odoo>

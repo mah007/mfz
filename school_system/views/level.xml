@@ -1,0 +1,35 @@
+<odoo>
+    <record id="level_view_form" model="ir.ui.view">
+        <field name="name">level_view_form</field>
+        <field name="model">student.level</field>
+        <field name="arch" type="xml">
+            <form string="level_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+
+                    </group>
+                    <field name="students" widget="one2many"/>
+                        
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="level_view_tree" model="ir.ui.view">
+        <field name="name">level_view_tree_view_tree</field>
+        <field name="model">student.level</field>
+        <field name="arch" type="xml">
+            <tree string="level_view_tree_tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="level_action" model="ir.actions.act_window">
+        <field name="name">levels</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.level</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

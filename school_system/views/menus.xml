@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+   <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+   <menuitem id="school_menu" name="School Management System" sequence="5"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="students_categ" name="Students" parent="school_menu" sequence="1"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="students_list" name="Students" parent="students_categ" action="student_view_action" sequence="1"/>
+
+      <!-- This Menu Item Must have a parent -->
+      <menuitem id="school_settings" name="Settings" parent="school_menu" sequence="100"/>
+      <!-- This Menu Item must have a parent and an action -->
+      <menuitem id="leve_settings" name="Classes" parent="school_settings" action="level_action" sequence="5"/>
+  </data>
+</odoo>

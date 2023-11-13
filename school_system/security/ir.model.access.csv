@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+school_system.access_student_student,access_student_student,school_system.model_student_student,base.group_user,1,1,1,1
+school_system.access_student_level,access_student_level,school_system.model_student_level,base.group_user,1,1,1,1
+school_system.access_student_reason_reject,access_student_reason_reject,school_system.model_student_reason_reject,base.group_user,1,1,1,1
