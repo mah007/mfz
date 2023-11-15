@@ -1,7 +1,7 @@
 <odoo>
   <data>
    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
-   <menuitem id="school_menu" name="School Management System" sequence="5"/>
+   <menuitem id="school_menu" name="School Management System" sequence="5" groups="school_system.school_user"/>
     <!-- This Menu Item Must have a parent -->
     <menuitem id="students_categ" name="Students" parent="school_menu" sequence="1"/>
     <!-- This Menu Item must have a parent and an action -->

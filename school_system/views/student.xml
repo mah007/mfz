@@ -7,8 +7,8 @@
            <form string="Student">
                <header>
                    <button name="to_waiting" type="object" string="Reset" class="btn-info" attrs="{'invisible': [('state', '=', 'wait')]}"/>
-                   <button name="act_approve" type="object" string="Approve" class="btn-success" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
-                   <button name="%(school_system.reject_action)d" type="action" string="Reject" class="btn-danger" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
+                   <button name="act_approve" groups="school_system.school_manager" type="object" string="Approve" class="btn-success" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
+                   <button name="%(school_system.reject_action)d" groups="school_system.school_manager"  type="action" string="Reject" class="btn-danger" attrs="{'invisible': [('state', 'in', ['rejected','approved'])]}" />
                    <field name="state" widget="statusbar" statusbar_visible="wait,approved,rejected"/>
                </header>
                <sheet>

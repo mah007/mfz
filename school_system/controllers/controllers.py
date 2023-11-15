@@ -1,21 +1,37 @@
 # -*- coding: utf-8 -*-
-# from odoo import http
+import json
+
+from odoo import http
+from odoo.http import request
 
 
-# class SchoolSystem(http.Controller):
-#     @http.route('/school_system/school_system', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class SchoolSystem(http.Controller):
+    @http.route('/school/start', auth='public', website=True)
+    def index(self, **kw):
+        students = request.env['student.student'].sudo().search([('name', '!=', False)])
+        vals = {
+            'students': students
+        }
 
-#     @http.route('/school_system/school_system/objects', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('school_system.listing', {
-#             'root': '/school_system/school_system',
-#             'objects': http.request.env['school_system.school_system'].search([]),
-#         })
+        return request.render('school_system.school_system_home', vals)
 
-#     @http.route('/school_system/school_system/objects/<model("school_system.school_system"):obj>', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('school_system.object', {
-#             'object': obj
-#         })
+    @http.route('/school/profile/<int:student_id>', auth='public', website=True)
+    def profile(self, student_id=False, **kw):
+        students = request.env['student.student'].sudo().search([('id', '=', student_id)])
+        vals = {
+            'students': students
+        }
+
+        return request.render('school_system.school_system_profile', vals)
+
+    @http.route('/school/create/', auth='public',csrf=False,method=['post'])
+    def insert(self, **kw):
+        data = request.httprequest.data
+
+        student = request.env['student.student'].sudo()
+        print(data)
+        datajson = json.loads(data)
+
+        student.sudo().create(datajson)
+        return
+

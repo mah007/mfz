@@ -27,6 +27,7 @@ class Students(models.Model):
 
     def act_approve(self):
         for rec in self:
+
             rec.state = 'approved'
 
     def act_reject(self):

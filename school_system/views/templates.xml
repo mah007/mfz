@@ -1,24 +1,100 @@
 <odoo>
-    <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
-    </data>
+    <template id="school_system_home" name="Welcome school page">
+        <t t-call="website.layout">
+            <t t-set="title">Student Page</t>
+            <div class="oe_structure">
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <center><h1 style="color:black"> Student List </h1></center>
+                            <BR></BR>
+                            <hr style="border: 3px solid #e28743;
+  border-radius: 5px;"></hr>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <t t-foreach="students" t-as="student">
+
+
+                            <div class="card" style="width: 18rem;">
+                                <center><img class="card-img-top" t-if="student.image"
+                                             t-att-src="image_data_uri(student.image)"
+                                             style="height: 100px;width:100px;border-radius:50%;border:2px solid #e78f26"
+                                             alt="Card image cap"></img></center>
+                                <div class="card-body">
+                                    <center><h5 class="card-title"
+                                                style="color:#063970;font-size:21px;font-weight:bold;"><t
+                                            t-esc="student.name"/></h5></center>
+                                    <center><p class="card-text" style="color:black;font-size:15px;font-weight:bold;"><t
+                                            t-esc="student.gender"/>
+
+                                        <BR></BR>
+                                        <span class="badge badge-pill badge-info"><t t-esc="student.level.name"/></span>
+                                        &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                                        <span class="badge badge-pill badge-warning"><t t-esc="student.age"/></span>
+                                    </p></center><BR></BR>
+                                    <center><a t-att-href="'/school/profile/%s' % student.id" class="btn"
+                                               style="background-color:#063970;color:white;border-radius:31px;">See More
+                                        Info</a></center>
+                                </div>
+                            </div>&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+                        </t>
+                    </div><BR></BR>
+                </div>
+            </div>
+        </t>
+
+    </template>
+    <template id="school_system_profile" name="Student Profile">
+        <t t-call="website.layout">
+            <t t-set="title">Student Page</t>
+            <div class="oe_structure">
+                <div class="container">
+
+                    <div class="row">
+
+                        <t t-foreach="students" t-as="student">
+                        <table border="1" cellpadding="1" cellspacing="1"
+                               style="width:50%;background-color:#ffffcc;border-collapse:collapse;border:1px solid #ffcc00">
+                            <tbody>
+                                <tr>
+                                    <td>Student Name</td>
+                                    <td><t t-esc="student.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td><t t-esc="student.gender"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Nationality</td>
+                                    <td><t t-esc="student.nationality.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td><t t-esc="student.age"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Date Of Birth</td>
+                                    <td><t t-esc="student.dob"/></td>
+                                </tr>
+                                <tr>
+                                    <td>City</td>
+                                    <td><t t-esc="student.city.name"/></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        </t>
+
+
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
 </odoo>

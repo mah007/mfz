@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_students">
+        <t t-foreach="docs" t-as="student">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div>
+                           <center><h1 style="color:#2596be">
+
+                                  <span t-field="student.f_name"/>
+                            </h1></center></div>
+
+                        <div>
+                            <h3>Student Info</h3>
+                               <table class="table table-sm table-striped mt-4">
+                                   <tr>
+                                       <th>Full Name</th>
+                                       <th>Date Of Birth</th>
+                                       <th>Age </th>
+                                       <th>Student Level</th>
+                                       <th>Nationality</th>
+
+                                       <th>City</th>
+                                   </tr>
+
+                                   <tr>
+                                       <td> <span t-field="student.name"/></td>
+                                        <td> <span t-field="student.dob"/></td>
+                                        <td> <span t-field="student.age"/></td>
+                                        <td> <span t-field="student.level"/></td>
+                                        <td>  <span t-field="student.nationality"/> </td>
+                                        <td> <span t-field="student.city"/></td>
+                                   </tr>
+                               </table>
+                           </div>
+
+                        </div>
+
+
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_student" model="ir.actions.report">
+            <field name="name">student_info</field>
+            <field name="model">student.student</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">school_system.report_students</field>
+            <field name="report_file">school_system.report_students</field>
+            <field name="print_report_name">'Student - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_student_student"/>
+            <field name="binding_type">report</field>
+    </record>
+
+
+
+</odoo>
