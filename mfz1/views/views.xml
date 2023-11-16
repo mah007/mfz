@@ -14,4 +14,9 @@
        </field>
    </record>
   </data>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem name="My Tasks" id="menu_project_management"
+              web_icon="mfz1,static/description/icon.png"
+            action="project.action_view_all_task" sequence="2" groups="base.group_no_one,project.group_project_user"/>
 </odoo>
